@@ -22,8 +22,7 @@ function deleteFromEmployeeByKey(employee, key) {
     return copy;
 }
 
-function destructivelyDeleteFromEmployeeByKey(employee, key, value) {
-    const copy = {...employee};
-    employee[key] = value;
+function destructivelyDeleteFromEmployeeByKey(employee, key) {
+    delete employee[key];
     return employee;
 }
